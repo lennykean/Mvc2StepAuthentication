@@ -1,0 +1,24 @@
+﻿@model SecondAuthModel
+@{
+    ViewBag.Title = "Login Step 2";
+}
+
+<hgroup>
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+@using (Html.BeginForm(new { ViewBag.ReturnUrl }))
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend>Log in</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Token)
+                @Html.TextBoxFor(m => m.Token)
+                @Html.ValidationMessageFor(m => m.Token)
+            </li>
+        </ol>
+        <input type="submit" value="Authenticate" />
+    </fieldset>
+}

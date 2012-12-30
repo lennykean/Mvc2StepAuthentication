@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GVoiceSharp</name>
+    </assembly>
+    <members>
+        <member name="T:GVoiceSharp.GVoiceConnection">
+            <summary>
+            Represents a connection to google voice services
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.IGVoiceConnection">
+            <summary>
+            Represents a connection to google voice services
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.IGVoiceConnection.Login(System.String,System.String)">
+            <summary>
+            Login to google voice
+            </summary>
+            <param name="email">Google voice email</param>
+            <param name="password">Google voice password</param>
+        </member>
+        <member name="M:GVoiceSharp.IGVoiceConnection.SendSms(System.String,System.String)">
+            <summary>
+            Send an SMS to a specified phone number
+            </summary>
+            <param name="phoneNumber">Phone number to send the sms to</param>
+            <param name="message">SMS Message</param>
+        </member>
+        <member name="M:GVoiceSharp.IGVoiceConnection.Close">
+            <summary>
+            Close the connection
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceConnection.#ctor(GVoiceSharp.Web.IWebManager)">
+            <param name="webManager">Object to manage the web requests</param>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceConnection.Login(System.String,System.String)">
+            <summary>
+            Login to google voice
+            </summary>
+            <param name="email">Google voice email</param>
+            <param name="password">Google voice password</param>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceConnection.SendSms(System.String,System.String)">
+            <summary>
+            Send an SMS to a specified phone number
+            </summary>
+            <param name="phoneNumber">Phone number to send the sms to</param>
+            <param name="message">SMS Message</param>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceConnection.Close">
+            <summary>
+            Close the connection
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.GVoiceConnectionFactory">
+            <summary>
+            Creates google voice connections
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceConnectionFactory.Create">
+            <summary>
+            Create a connection
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.GVoiceException">
+            <summary>
+            Represents errors from google voice services
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.GVoiceException.#ctor(System.Int32)">
+            <param name="errorCode">Error code from the service</param>
+        </member>
+        <member name="P:GVoiceSharp.GVoiceException.ErrorCode">
+            <summary>
+            Error code from the service
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.Web.Form">
+            <summary>
+            Represents an html form
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.Form.#ctor(System.Uri,System.String,GVoiceSharp.Web.FormFieldCollection)">
+            <param name="action">Form action</param>
+            <param name="html">Html of the form</param>
+            <param name="fields">Form fields</param>
+        </member>
+        <member name="P:GVoiceSharp.Web.Form.Action">
+            <summary>
+            Form action
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.Form.Html">
+            <summary>
+            Form html
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.Form.Fields">
+            <summary>
+            Form field data
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.Web.FormField">
+            <summary>
+            Represents an html form field
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormField.#ctor(System.String,System.String)">
+            <param name="name">Name of the field</param>
+            <param name="value">Value of the field</param>
+        </member>
+        <member name="P:GVoiceSharp.Web.FormField.Name">
+            <summary>
+            Name of the field
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.FormField.Value">
+            <summary>
+            Value of the field
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.Web.FormFieldCollection">
+            <summary>
+            Collection of form field data
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldCollection.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:GVoiceSharp.Web.FormFieldCollection"/>
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldCollection.Add(GVoiceSharp.Web.FormField)">
+            <summary>
+            Adds a specified form field to the collection
+            </summary>
+            <param name="formField">Form field to add</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldCollection.ContainsField(System.String)">
+            <summary>
+            Determines whether the collection contains the form field by name
+            </summary>
+            <param name="name">Name of the form field</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:GVoiceSharp.Web.FormFieldCollection.Count">
+            <summary>
+            Gets the number of form fields in the collection
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.FormFieldCollection.Item(System.String)">
+            <summary>
+            Gets a form field by name
+            </summary>
+            <param name="name">Name of the form field</param>
+        </member>
+        <member name="T:GVoiceSharp.Web.FormFieldSerializationType">
+            <summary>
+            Defines how form fields should be serialized
+            </summary>
+        </member>
+        <member name="F:GVoiceSharp.Web.FormFieldSerializationType.PlainText">
+            <summary>
+            Plain text serialization
+            </summary>
+        </member>
+        <member name="F:GVoiceSharp.Web.FormFieldSerializationType.UrlEncoded">
+            <summary>
+            Url encoded serialization
+            </summary>
+        </member>
+        <member name="F:GVoiceSharp.Web.FormFieldSerializationType.Multipart">
+            <summary>
+            Multipart form data serialization
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.Web.FormFieldSerializer">
+            <summary>
+            Serializes and deserializes form data
+            </summary>
+        </member>
+        <member name="T:GVoiceSharp.Web.IFormFieldSerializer">
+            <summary>
+            Serializes and deserializes form data
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.IFormFieldSerializer.Serialize(GVoiceSharp.Web.FormFieldCollection)">
+            <summary>
+            Serializes form data with the default serialization method.
+            </summary>
+            <param name="fields">Form data to serialize</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.IFormFieldSerializer.Serialize(GVoiceSharp.Web.FormFieldCollection,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Serializes form data
+            </summary>
+            <param name="fields">Form data to serialize</param>
+            <param name="serializationType">Serialization method to use</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.IFormFieldSerializer.Deserialize(System.String)">
+            <summary>
+            Deserializes form data using the default serialization method
+            </summary>
+            <param name="formData">Form data to deserialize</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.IFormFieldSerializer.Deserialize(System.String,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Deserializes form data
+            </summary>
+            <param name="formData">Form data to deserialize</param>
+            <param name="serializationType">Type of serialization to use</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldSerializer.Serialize(GVoiceSharp.Web.FormFieldCollection)">
+            <summary>
+            Serializes form data with the default serialization method.
+            </summary>
+            <param name="fields">Form data to serialize</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldSerializer.Serialize(GVoiceSharp.Web.FormFieldCollection,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Serializes form data
+            </summary>
+            <param name="fields">Form data to serialize</param>
+            <param name="serializationType">Serialization method to use</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldSerializer.Deserialize(System.String)">
+            <summary>
+            Deserializes form data using the default serialization method
+            </summary>
+            <param name="formData">Form data to deserialize</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormFieldSerializer.Deserialize(System.String,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Deserializes form data
+            </summary>
+            <param name="formData">Form data to deserialize</param>
+            <param name="serializationType">Type of serialization to use</param>
+        </member>
+        <member name="T:GVoiceSharp.Web.FormParser">
+            <summary> 
+            Parses form data from html
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormParser.ParseForms(System.IO.Stream)">
+            <summary>
+            Parse form data from html stream
+            </summary>
+            <param name="stream">Steam containing html</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormParser.ParseForms(System.String)">
+            <summary>
+            Parse form data from html string
+            </summary>
+            <param name="html">Html to parse</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.FormParser.ParseFormFields(System.String)">
+            <summary>
+            Parse form fields from html string
+            </summary>
+            <param name="html">Html to parse</param>
+        </member>
+        <member name="T:GVoiceSharp.Web.IWebManager">
+            <summary>
+            Manages web requests
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.IWebManager.RequestPage(System.Uri)">
+            <summary>
+            Request a web resource
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the requested resource</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.IWebManager.PerformPost(System.Uri,GVoiceSharp.Web.FormFieldCollection,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Perform post to a resource
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the resource to post data to</param>
+            <param name="fields">Collection of fields to post</param>
+            <param name="serializationType">Type of form serialization to use</param>
+        </member>
+        <member name="T:GVoiceSharp.Web.WebManager">
+            <summary>
+            Manages web requests
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.WebManager.#ctor(GVoiceSharp.Web.IFormFieldSerializer)">
+            <summary>
+            Initializes a new instace of <see cref="T:GVoiceSharp.Web.WebManager"/>
+            </summary>
+            <param name="serializer">Form field serializer</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.WebManager.RequestPage(System.Uri)">
+            <summary>
+            Request a web resource
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the requested resource</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.WebManager.PerformPost(System.Uri,GVoiceSharp.Web.FormFieldCollection,GVoiceSharp.Web.FormFieldSerializationType)">
+            <summary>
+            Perform post to a resource
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the resource to post data to</param>
+            <param name="fields">Collection of fields to post</param>
+            <param name="serializationType">Type of form serialization to use</param>
+        </member>
+        <member name="M:GVoiceSharp.Web.WebManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:GVoiceSharp.Web.WebManagerResponse">
+            <summary>
+            Response from a <see cref="T:GVoiceSharp.Web.IWebManager"/> request
+            </summary>
+        </member>
+        <member name="M:GVoiceSharp.Web.WebManagerResponse.#ctor(System.Int32,System.Uri,System.Collections.Generic.Dictionary{System.String,System.String},System.IO.Stream)">
+            <param name="httpStatusCode">Status code of the response</param>
+            <param name="responseUri">Resource that responded the request</param>
+            <param name="headers">Header collection</param>
+            <param name="response">Response stream</param>
+        </member>
+        <member name="P:GVoiceSharp.Web.WebManagerResponse.HttpStatusCode">
+            <summary>
+            Status code of the response
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.WebManagerResponse.ResponseUri">
+            <summary>
+            Resource that responded to the request
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.WebManagerResponse.Headers">
+            <summary>
+            Collection of headers from the response
+            </summary>
+        </member>
+        <member name="P:GVoiceSharp.Web.WebManagerResponse.Response">
+            <summary>
+            Response stream
+            </summary>
+        </member>
+    </members>
+</doc>

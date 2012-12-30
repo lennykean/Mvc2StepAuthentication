@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc2StepAuthentication", "Mvc2StepAuthentication\Mvc2StepAuthentication.csproj", "{2EA7744A-1C2E-4E16-8FC4-F30BC329B4B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{19C11D45-6594-45C1-ABD1-2F7C6D9BC21A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{845B9FB4-05FD-4AB9-A967-EA0DCD829FD1}"
+	ProjectSection(SolutionItems) = preProject
+		GVoiceSharp.dll = GVoiceSharp.dll
+		GVoiceSharp.XML = GVoiceSharp.XML
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EA7744A-1C2E-4E16-8FC4-F30BC329B4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA7744A-1C2E-4E16-8FC4-F30BC329B4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA7744A-1C2E-4E16-8FC4-F30BC329B4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA7744A-1C2E-4E16-8FC4-F30BC329B4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
